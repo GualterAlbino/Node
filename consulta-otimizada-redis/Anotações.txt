@@ -1,0 +1,54 @@
+
+//------------------------------------//
+//Comandos para rodar o projeto
+//------------------------------------//
+
+//Rodar o projeto
+npm run dev
+
+//Criar o banco de dados com base no schema
+npx prisma db push
+
+//Comando para gerar usuarios (Foi adicionado no package.json para facilitar)
+npx prisma db seed
+
+
+
+
+//------------------------------------//
+   Dependências e afins
+//------------------------------------//
+//Inicializa o projeto
+npm init -y
+
+//Cria o arquivo .gitignore com as configurações para node
+curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
+
+//Instala o typescript
+npm i typescript -D
+
+//Inicializa o typescript
+tsc --init
+
+//Instala o ts-node-dev
+npm i ts-node-dev -D
+
+//Instala o express
+npm i express
+
+//Instala o types do express
+npm i @types/express -D
+
+//Intala o Prisma
+npm i prisma ts-node @types/node -D
+
+//Inicializa o prisma
+npx prisma init
+
+
+//Instala o faker
+npm i @faker-js/faker
+
+
+
+

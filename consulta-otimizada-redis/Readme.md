@@ -1,6 +1,7 @@
-# Node
+# Node + Redis
+
 <h1 align="center">
-  Repositório dedicado a exemplos de soluções utilizando o Node acompanhado de outras tecnologias.
+  API simples utilizando cacheamento com Redis. 
 </h1>
 
 <p align="center">
@@ -14,7 +15,7 @@
 
 ## :dart: Sobre
 
-...
+Esta APi simples uitliza cache em suas consultas com o Redis. 
 
 
 

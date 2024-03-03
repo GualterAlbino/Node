@@ -1,0 +1,51 @@
+version: '3.9'
+
+services:
+  # App
+  app:
+    build: .
+    depends_on:
+      - redis
+    command: npm run dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    environment:
+      NODE_ENV: dev
+      PORT: 3000
+
+  # Banco de dados
+  database:
+    container_name: database
+    image: postgres:12
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # pgAdmin
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${DB_ADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - '8081:80'
+    depends_on:
+      - database
+
+    # Redis
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+
+volumes:
+  pgdata: {}
