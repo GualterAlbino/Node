@@ -29,23 +29,7 @@ Este repositório é composto por projetos diversos, cada um explorando um conce
 
 ## 📂 Estrutura dos Projetos
 
-### 🗂️ **buscas-filtros-paginacao**
-- **Descrição**: Demonstra a implementação de um sistema eficiente para buscas e filtragens de dados, com suporte a paginação avançada. Ideal para lidar com grandes conjuntos de informações de forma escalável.
-- **Tecnologias**: Node.js, Express.js, MongoDB.
-
----
-
-### 🗂️ **consulta-otimizada-redis**
-- **Descrição**: Explora o uso do Redis como cache para otimizar consultas frequentes a bancos de dados, reduzindo latência e melhorando a performance de APIs.
-- **Tecnologias**: Node.js, Redis.
-
----
-
-### 🗂️ **node-streams**
-- **Descrição**: Apresenta o uso de streams em Node.js para manipulação de dados em tempo real, com exemplos de leitura, transformação e escrita eficiente.
-- **Tecnologias**: Node.js, Streams API.
-
----
+- Cada projeto contém/deve conter um README.md com suas devidas especificações.
 
 ## 🚀 Como Utilizar
 
@@ -64,23 +48,12 @@ cd <nome-do-projeto>
  ```
 
 4. Execute o projeto:
-```bash
-npm start
-```
-(Atente-se aos scripts pré-configurados de cada projeto em *package.json*)
 
-<hr>
-
-## 🛠️ Tecnologias Utilizadas
-- `Node.js`: Plataforma principal.
-- `Express.js`: Framework para APIs REST.
-- `MongoDB`: Banco de dados NoSQL.
-- `Redis`: Sistema de cache de alto desempenho.
-- `Streams API`: Manipulação eficiente de dados.
+  `Atente-se aos scripts pré-configurados de cada projeto no arquivo package.json`
 
 <hr>
   
 ## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou abrir issues para discutir melhorias.
 
-<p align="center"> Feito com por <a href="https://www.linkedin.com/in/gualter/">Gualter Albino</a> </p>
+<p align="center"> Feito por <a href="https://www.linkedin.com/in/gualter/">Gualter Albino</a> </p>
