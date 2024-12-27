@@ -20,26 +20,27 @@
 
 1. Necessario versão do NodeJS >= 22.9.0
 
-1. Clone o repositório:
+2. Clone o repositório:
 ```
-git clone https://github.com/GualterAlbino/Node.git
+git clone https://github.com/GualterAlbino/Node/edit/master/sqlite-nativo.git
 ```
 
-2. Acesse a pasta do projeto desejado:
-```bash
+3. Acesse a pasta do projeto desejado:
+```
 cd <nome-do-projeto>
 ```
-3. Instale as dependências:
- ```bash
+4. Instale as dependências:
+ ```
  npm install
  ```
 
-4. Execute o projeto:
+5. Execute o projeto:
 
-  `Atente-se aos scripts pré-configurados de cada projeto no arquivo package.json`
+ ```
+ npm run dev
+ ```
 
-<hr>
-
-
-## 🚀 Tecnologias
-<p align="center"> Feito por <a href="https://www.linkedin.com/in/gualter/">Gualter Albino</a> </p>
+6. Execute em debug:
+```
+ CTRL + S / F5
+```
