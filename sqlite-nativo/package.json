@@ -1,0 +1,19 @@
+{
+  "name": "sqlite-nativo",
+  "version": "1.0.0",
+  "description": "Testes utilização SQLITE que se tornou um recuros nativo do NodeJS a partir da versão 22.9.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "dev": "node --inspect --watch --experimental-sqlite src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sql-bricks": "^3.0.1"
+  }
+}
