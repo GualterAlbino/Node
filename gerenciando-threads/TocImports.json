@@ -1,0 +1,13 @@
+{
+  "order": "ASC",
+  "quote": "single",
+  "tabWidth": 2,
+  "groups": [
+    { "pattern": "@faker-js/faker/.", "comment": "Faker" },
+    { "pattern": "@components", "comment": "Componnets" },
+    { "pattern": "@service", "comment": "Services" },
+    { "pattern": "@domain", "comment": "Domain" },
+    { "pattern": "@infra", "comment": "Infrastructure" },
+    { "pattern": "", "comment": "Outros" }
+  ]
+}
