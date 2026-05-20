@@ -47,6 +47,13 @@ Obs: Exporta no formato ndjson, onde cada linha é um objeto JSON, facilitando a
 
 
 
+-- Arquivo "export-five-years.ts" ele consulta no banco de dados e utilizando o recurso de streams e realiza a filtragem em memoria dos registros dos
+últimos cinco anos. Utiliza o recurso "function*" + stream
+
+```bash
+npx ts-node-dev src/scripts/export-five-years.ts
+```
+
 Paralelo 1 (Promise All):
 seed-db: 1:58.387 (m:ss.mmm)
 

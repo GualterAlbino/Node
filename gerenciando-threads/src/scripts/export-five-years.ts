@@ -33,16 +33,22 @@ async function* selectEntireDB() {
 
 let processedItems = 0;
 
-const dataStream = Readable.from(selectEntireDB()).map((item) => {
-  processedItems++;
-  return JSON.stringify(item) + '\n';
-});
+const stream = Readable.from(selectEntireDB())
+  .filter(({ createdAt }) => new Date(createdAt) > new Date(new Date().getFullYear() - 5, 0, 1))
+
+  .map((item) => {
+    processedItems++;
+
+    return JSON.stringify(item).concat('\n');
+  });
 
 (async () => {
   await connectDB();
-  console.time('create-file');
-  await pipeline(dataStream, createWriteStream(`${dataDir}/legacy_users.ndjson`));
-  console.log(`Processed ${processedItems} items`);
-  console.timeEnd('create-file');
+  console.time('sql-to-json');
+  await pipeline(stream, createWriteStream(`${dataDir}/users.ndjson`));
+
+  console.timeEnd('sql-to-json');
+
+  console.log(`Registros Processados: ${processedItems}`);
   await closeDB();
 })();
